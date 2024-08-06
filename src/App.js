@@ -17,8 +17,8 @@ const App = () => {
 
     <Navbar2/>
 
-   {/*  <HeroSection/> */}
-   {/* <SparklesPreview/> 
+     <HeroSection/> 
+    {/* <SparklesPreview/>  */}
 
     <About/>
     <Services/>
@@ -26,7 +26,7 @@ const App = () => {
     <Projects/>
     <ContactMe/>
     <Footer/>
-    */}
+    
     </div>
   )
 }

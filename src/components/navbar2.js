@@ -17,7 +17,7 @@ const Navbar2 = () => {
 
   return (
     <>
-      <div className='w-full overflow-x-hidden shadow-2xl flex items-center justify-around sticky top-0 z-50'>
+      <div className='w-full overflow-x-hidden shadow-2xl flex items-center justify-between md:px-8 sm:px-4 sticky top-0 z-50'>
         {/* Logo */}
         <div className='flex'>
           <img className='md:py-3 sm:py-3 mt-4 w-32 rounded-full' src={logo} alt="Logo" />
