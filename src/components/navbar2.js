@@ -39,14 +39,14 @@ const Navbar2 = () => {
         </nav>
 
         {/* right button */}
-        <Sociallinks/>
-        <button className='block lg:hidden ' onClick={openMenu}>
+        
+        <button className='block  lg:hidden md:hidden' onClick={openMenu}>
             <RiMenu3Fill className=' size-6 text-white' />
           </button>
         
 
         {/* .......for Mobile screen  */}
-        <ul id='sideMenu' className={`flex md:hidden flex-col gap-4 py-20 px-10 rounded-lg bg-yellow-200 font-semibold fixed top-0 bottom-0 right-0 w-64 h-screen z-50 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <ul id='sideMenu' className={`flex md:hidden flex-col gap-4 py-20 px-10 rounded-lg bg-yellow-200 font-semibold fixed top-0 bottom-0 right-0 w-full h-screen z-50 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
           <div className='absolute right-6 top-6' onClick={closeMenu}>
             <RxCross2 />
@@ -56,6 +56,8 @@ const Navbar2 = () => {
           <li><a href='#services'>Services</a></li>
           <li><a href='#projects'>Projects</a></li>
           <li><a href='#contact'>Contact</a></li>
+
+          <Sociallinks className="self-end" />
         </ul>
       </div>
     </>

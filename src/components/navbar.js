@@ -34,8 +34,8 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-      <div className=' flex items-end justify-end gap-4' >
-      <ul className='flex  items-end gap-4'>
+      <div className='sm:hidden flex items-end justify-end gap-4' >
+      <ul className=' sm:hidden flex  items-end gap-4'>
         <li href='' target='-blank' >
         <FaFacebook className='header-color' />
         </li>
