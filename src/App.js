@@ -7,7 +7,8 @@ import Projects from './components/projects'
 import ContactMe from './components/contact-me'
 import Footer from './components/footer'
 import Myskill from './components/Myskill'
-import Sociallinks from './components/sociallinks'
+import ProjectsSlider from './components/projectsSlider'
+import './index.css';
 
 
 
@@ -20,7 +21,7 @@ const App = () => {
     <About/>
     <Services/>
     <Myskill/>
-    <Projects/>
+    <ProjectsSlider/>
     <ContactMe/>
     <Footer/>
    

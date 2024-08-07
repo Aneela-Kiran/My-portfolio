@@ -1,11 +1,12 @@
 import React from 'react'
 import logo from '../assets/aneela-logo3.png';
-import Sociallinks from './sociallinks'
+
+
 const Footer = () => {
   return (
     <div className='custom-black'>
-    <div className=' p-5 w-full'>
-      <div className='flex justify-between '>
+  
+      <div className='flex justify-between p-5 w-full '>
       {/* logo */}
       <div className='flex'>
           <img className=' w-32 7-32 rounded-full ' src={logo}></img>
@@ -30,14 +31,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
     </div>
     <hr></hr>
-    {/* <div className='flex items-center justify-evenly p-8'>
-    <span  className='text-white items-center p-3'>@2024Aneela Kiran.All rights Reserved</span>
-    <Sociallinks/> 
-
-    </div> */}
     <p className='text-white items-center p-3'>@2024Aneela Kiran.All rights Reserved</p>
     </div>
   )

@@ -11,10 +11,6 @@
 
  }
 
-.header-color{
-color: #D9BA82;
-}
-
 .navbar-parent{
   background-color: #151515;
 }
@@ -38,11 +34,20 @@ color: #D9BA82;
   background-color: #151B26;
 }
 
-/* let talk color */
-.color{
-  color: #cf952a;
-}
-
 .about-background{
   background-color: #171717;
+}
+
+.slick-dots li button:before {
+  color: rgb(250, 250, 242) !important; 
+}
+
+/* React-Slick Css */
+.slick-dots li.slick-active button:before {
+  color: rgb(174, 148, 14) !important; 
+}
+
+.slick-prev:before, .slick-next:before {
+ 
+  color: yellow !important ; 
 }

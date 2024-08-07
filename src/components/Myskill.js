@@ -10,44 +10,30 @@ import typescript from '../assets/typescript.png';
 import Gsap from '../assets/Gsap1.png';
 
 
+const skillsData = [
+  { id: 1, imgSrc: reactLogo  },
+  { id: 2, imgSrc: js },
+  { id: 3, imgSrc: node },
+  { id: 4, imgSrc: next },
+  { id: 5, imgSrc: html5 },
+  { id: 6, imgSrc: tailwind },
+  { id: 7, imgSrc: typescript},
+  { id: 8, imgSrc: Gsap }
+];
+
+
 const Myskill = () => (
-  <div id='skills' className="about-background py-12 mt-16  mx-auto m-4 px-8 ">
+  <section id='skills' className="about-background py-12 mt-16 mx-auto m-4 px-8">
     <h2 className="text-center text-4xl font-bold text-yellow-500 mb-8">Development Skill</h2>
-    <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
-
-      <div className=" m-8  rounded-lg flex items-center justify-center">
-        <img src={reactLogo}  className="h-24 w-auto rounded-xl shadow-2xl object-cover" />
-      </div>
-      <div className=" p-4 rounded-lg flex items-center justify-center">
-        <img src={js}  className="h-24 w-auto rounded-xl shadow-xl object-cove" />
-      </div>
-      <div className=" p-4 rounded-lg flex items-center justify-center">
-        <img src={node}  className="h-24 w-auto rounded-xl shadow-xl object-cove" />
-      </div>
-
-<div className=" p-4 rounded-lg flex items-center justify-center">
-        <img src={next}  className="h-24 w-auto rounded-xl shadow-xl object-cove" />
-      </div>
-
-      <div className=" p-4 rounded-lg flex items-center justify-center">
-        <img src={html5}  className="h-24 w-24 rounded-xl shadow-xl object-cove" />
-      </div>
-      
-      
-      <div className=" p-4 rounded-lg flex items-center justify-center">
-        <img src={tailwind}  className="h-24 w-auto rounded-xl shadow-xl object-cove" />
-      </div>
-      
-      <div className=" p-4 rounded-lg  flex items-center justify-center">
-        <img src={typescript}  className="h-24 w-24 rounded-xl shadow-xl object-cove" />
-      </div>
-
-      <div className=" p-4 rounded-lg  flex items-center justify-center">
-        <img src={Gsap}  className="h-28 w-28 rounded-xl shadow-xl object-cove" />
-      </div>
-
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+      {skillsData.map(skill => (
+        <div key={skill.id} className="p-2 flex items-center justify-center rounded-xl shadow-xl overflow-hidden">
+          <img src={skill.imgSrc}  className="h-24 w-auto object-cover" />
+        </div>
+      ))}
     </div>
-  </div>
+  </section>
 );
 
 export default Myskill;
+

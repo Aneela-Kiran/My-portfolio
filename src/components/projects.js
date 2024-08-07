@@ -2,6 +2,7 @@ import React from 'react'
 import image from '../assets/home-project.jpg';
 import image1 from '../assets/project2.jpg';
 import image2 from '../assets/project3.jpg'
+
 const Projects = () => {
   return (
     <section id='projects' className='py-12 mx-auto m-4 px-8 '>

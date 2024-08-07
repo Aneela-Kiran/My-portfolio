@@ -39,7 +39,7 @@ const Navbar2 = () => {
         </nav>
 
         {/* right button */}
-        <Sociallinks/>
+        <Sociallinks />
         <button className='block lg:hidden ' onClick={openMenu}>
             <RiMenu3Fill className=' size-6 text-white' />
           </button>

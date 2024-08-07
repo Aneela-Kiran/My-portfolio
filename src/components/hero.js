@@ -8,19 +8,16 @@ import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection = () => {
   return (
-
-    <div id='home' className='sm:flex sm:flex-col-reverse md:flex-row mt-10  lg:flex items-center justify-center py-3'>
-
-
+      <React.Fragment>
+    <section id='home' className='flex flex-col-reverse   justify-center md:flex-row mt-10  md:justify-evenly  items-center py-3 mx-auto m-4 px-8'>
 
         {/* hero Text */}
-      <div className='sm:m-5 md:mb-2 md:mt-7  md:px-6 md:py-5 text-white font-medium '>
-        <h1 className=' mb-3 text-6xl '><span className='text-sm py-2'>Hello,There Welcome to my site</span> <br></br><span className='py-2 mt-2 animate-fadeIn sm:text-5xl  '>I'm Aneela Kiran</span></h1>
+      <div className='m-3 mb-2 mt-7 px-3 mx-auto md:mx-0  md:py-5 leading-snug text-center md:text-left text-white text-sm  '>
+        <h1><span className='text-sm py-2'>Hello,There Welcome to my site</span> <br></br><span className='py-2   mt-2 animate-fadeIn text-3xl sm:text-5xl '>I'm Aneela Kiran</span></h1>
       <TypeAnimation
-              className="text-yellow-500  mb-3 font-bold"
+              className="text-yellow-500 inline-block text-[2em] m-2 sm:text-6xl mb-3 font-bold"
               sequence={[
-
-                "  Frontend Developer",
+                "Frontend Developer",
                 2000, 
                 "React+Tailwindcss",
                 1000,
@@ -28,27 +25,35 @@ const HeroSection = () => {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "3em", display: "inline-block" }}
               repeat={Infinity}
             />
-      <p>A passionate Frontend Developer dedicated to crafting visually appealing <br></br> and user-friendly websites. Specializing in turning innovative designs  into <br></br>seamless digital experiences, I focus on delivering high-quality, responsive <br></br>and engaging interfaces</p>
+              <div className="max-w-xl  mx-14 sm:mx-auto">
+                  <p className="text-sm md:text-xl text-gray-400  leading-relaxed hover:text-white ">
+                      Passionate Frontend Developer focused on creating user-friendly responsive, and visually appealing websites.
+                 </p>
+              </div>
+
           {/* Buttons */}
-      <div className='flex md:items-start md:justify-start mt-5 sm:justify-center sm:items-center  animate-slideIn' >
-      <a href='#contact' className=" text-white font-bold m-4 py-2 px-12 border border-spacing-2 rounded-full shadow-lg hover:shadow-[0_0_15px_5px_rgba(255,255,0,0.50)] transition duration-300 ease-in-out sm:hidden md:block">
+      <div className='flex md:items-start  md:justify-start mt-8 justify-center items-center  animate-slideIn' >
+
+      <a href='#contact' className=" text-white font-bold m-4 py-2 px-12  rounded-full  shadow-[0_0_15px_5px_rgba(255,255,0,0.50)] transition duration-300 ease-in-out hidden md:block">
        Hire me
        </a>
        
-      <a href='https://drive.google.com/file/d/1TimMCDmqNMmvYF5DSYKTLGzeONtbKYPz/view?usp=drive_link' target='_blank' className=" text-white font-bold m-4 py-2 px-4   rounded-full shadow-lg                 shadow-[0_0_15px_5px_rgba(255,255,0,0.50)] transition duration-300 ease-in-out    flex items-end  gap-2 sm:py-2 sm:px-6  ">
+      <a href='https://drive.google.com/file/d/1TimMCDmqNMmvYF5DSYKTLGzeONtbKYPz/view?usp=drive_link' target='_blank' className=" border border-spacing-2 hover:shadow-[0_0_15px_5px_rgba(255,255,0,0.50)] text-white font-bold m-4 py-3 px-6   rounded-full shadow-lg  flex items-end  gap-2 sm:py-2 sm:px-4 ">
        Download CV <MdOutlineFileDownload  className='mb-1 font-bold'/>
        </a>
       </div> 
       </div>
       
      {/* picture  */}
-        <div className='mt-6 ml-10 overflow-hidden rounded-full  shadow-2xl   '>
-        <img className='w-96 h-100  'src={image} alt='image not found'></img>
+
+        <div className='mt-6 ml-10 h-100 w-auto overflow-hidden rounded-full  shadow-2xl   '>
+        <img className='w-80 h-96  object-cover'src={image} alt='image not found'></img>
         </div> 
-      </div>
+
+      </section>
+      </React.Fragment>
   )
 }
 
