@@ -24,7 +24,7 @@ const Navbar2 = () => {
         </div>
         
         {/* Desktop Menu */}
-        <nav className="hidden md:block mt-4 md:py-2 md:px-3 m-3 flex items-center justify-center rounded-3xl custom-black shadow-xl gap-6">
+        <nav className="hidden lg:block mt-4 md:py-2 md:px-3 m-3  items-center justify-center rounded-3xl custom-black shadow-xl gap-6">
           <ul className='hidden lg:flex gap-6 font-medium text-cyan-50'>
             <li><a href='#home' className='text-yellow-500'>Home</a></li>
             <li><a href='#about'>About</a></li>
