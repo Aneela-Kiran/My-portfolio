@@ -1,45 +1,72 @@
-import React from 'react'
-import image from '../assets/home-project.jpg';
-import image1 from '../assets/project2.jpg';
-import image2 from '../assets/project3.jpg'
 
-const Projects = () => {
+import React from "react";
+import projects from "../Data/projectData";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
+const ProjectsSlider = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
   return (
-    <section id='projects' className='py-12 mx-auto m-4 px-8 '>
+    <section id="projects" className="py-12 mt-16 mx-auto m-4 px-8">
+      <h1 className="text-yellow-500 font-bold text-3xl text-center mb-8">
+        Projects
+      </h1>
+      <Slider {...settings}>
 
-      <h1 className='text-yellow-500 font-bold text-3xl text-center mb-8 '>Projects</h1>
+        {projects.map((item, index) => (
+          <div key={index} className="shadow-4xl p-3  rounded-lg">
+            <div className="bg-slate-300 overflow-hidden rounded-lg  h-64 flex justify-center items-center m-3 ">
+              <img
+                className="h-full w-full object-cover border-2 hover:scale-125 duration-1000 border-yellow-400"
+                src={item.image}
+                alt={item.title}
+              />
+            </div>
+            <p className="font-semibold text-gray-50  py-2 ">{item.title}</p>
+            <p className="text-purple-400 text-sm ">{item.tech}</p>
+           <div className="text-gray-200 text-start  py-2"> <p >{item.description}</p></div>
+          </div>
+        ))}
+        
+      </Slider>
+    </section>
+  );
+};
 
-      <div className="grid grid-cols-3 grid-rows-2 gap-4 p-4">
-
-      <div className=" p-4 flex items-center justify-center transform transition  duration-500 hover:scale-105 hover:shadow-xl">
-        <img className='h-full w-full object-cover rounded-xl' src={image}></img>
-        </div>
-
-      <div className="col-span-2 rounded-lg h-96 w-100  overflow-hidden  p-4   flex items-center justify-center transform transition  duration-500 hover:scale-105 hover:shadow-xl">
-        <img className=' h-full w-full object-cover rounded-xl' src={image1}></img>
-        </div>
-
-        <div className=" p-4     flex items-center justify-center transform transition  duration-500 hover:scale-105 hover:shadow-xl">
-        <img className='h-full w-full object-cover rounded-xl' src={image2}></img>
-        </div>
-
-        <div className=" p-4     flex items-center justify-center transform transition  duration-500 hover:scale-105 hover:shadow-xl">
-        <img className='h-full w-full object-cover rounded-xl' src={image1}></img>
-        </div>
-
-      <div className=" mt-1 h-96 w-100  overflow-hidden p-4 flex items-center justify-center transform transition  duration-500 hover:scale-105 hover:shadow-xl">
-      <img className=' h-full w-full object-cover rounded-xl' src={image}></img>
-      </div>
-      {/* <div className=" p-4 flex items-center justify-center">
-        <img className='h-full w-full object-cover rounded-xl' src={image}></img>
-        </div>
-      <div className=" h-96 w-100 col-span-2 overflow-hidden p-4 flex items-center justify-center">
-      <img className=' h-full w-full object-cover rounded-xl' src={image}></img>
-      </div> */}
-    </div>
-      </section>
-  )
-}
-
-export default Projects
+export default ProjectsSlider;
 

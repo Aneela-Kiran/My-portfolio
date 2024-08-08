@@ -43,7 +43,7 @@ const HeroSection = () => {
           <div className="flex md:items-start  md:justify-start mt-8 justify-center items-center  ">
             <a
               href="#contact"
-              className=" text-white font-bold m-4 py-2 px-12  rounded-full  shadow-[0_0_15px_5px_rgba(255,255,0,0.50)]  hidden md:block"
+              className=" text-white font-bold m-4 py-3 px-14 rounded-full  shadow-[0_0_15px_5px_rgba(255,255,0,0.50)]  hidden md:block"
             >
               Hire me
             </a>
@@ -51,9 +51,9 @@ const HeroSection = () => {
             <a
               href="https://drive.google.com/file/d/1TimMCDmqNMmvYF5DSYKTLGzeONtbKYPz/view?usp=drive_link"
               target="_blank"
-              className=" border border-spacing-2 hover:shadow-[0_0_15px_5px_rgba(255,255,0,0.50)] text-white font-bold m-4 py-3 px-6   rounded-full shadow-lg  flex items-end  gap-2 sm:py-2 sm:px-4 "
+              className=" border border-spacing-2 border-yellow-500 hover:shadow-[0_0_15px_5px_rgba(255,255,0,0.50)] hover:border-none text-white font-bold m-4 py-3 px-6   rounded-full shadow-lg  flex items-end  gap-2  "
             >
-              Download CV <MdOutlineFileDownload className="mb-1 font-bold" />
+              Download CV <MdOutlineFileDownload className="mb-[2px] text-sm font-bold" />
             </a>
           </div>
         </div>

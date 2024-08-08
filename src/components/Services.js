@@ -1,6 +1,6 @@
 
 import React from 'react';
-import services from '../assets/servicesData';
+import services from '../Data/servicesData';
 
 const Services = () => {
   return (
