@@ -8,7 +8,7 @@
  body{
   background-color:#0a0a0a;
   background: linear-gradient();
-
+  cursor: none;
  }
 
 .navbar-parent{
@@ -50,4 +50,16 @@
 .slick-prev:before, .slick-next:before {
  
   color: yellow !important ; 
+}
+
+.cursor {
+  width: 40px;
+  height: 40px;
+ background-color: rgb(212, 182, 30);
+  border-radius: 50%; 
+  position: fixed; 
+  pointer-events: none; 
+  transform: translate(-50%, -50%); 
+  transition: transform 0.3s ease-out; 
+  z-index: 1000;
 }

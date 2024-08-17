@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/aneela-logo3.png';
 import { RiMenu3Fill } from "react-icons/ri";
+import { TiThMenu } from "react-icons/ti";
 import { RxCross2 } from "react-icons/rx";
 import Sociallinks from './sociallinks';
 
@@ -36,14 +37,15 @@ const Navbar = () => {
         </nav>
 
         {/* right button */}
+
         <Sociallinks/>
-        <button className='block lg:hidden ' onClick={openMenu}>
-            <RiMenu3Fill className=' size-6 text-white' />
+          <button className='block lg:hidden ' onClick={openMenu}>
+            <TiThMenu className=' border-2  p-4 size-6 text-white' />
           </button>
         
 
         {/* .......for Mobile screen  */}
-        <ul id='sideMenu' className={`flex md:hidden flex-col gap-4 py-20 px-10 rounded-lg bg-yellow-200 font-semibold fixed top-0 bottom-0 right-0 w-64 h-screen z-50 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <ul id='sideMenu' className={`flex md:hidden flex-col gap-4 py-20 px-10 rounded-lg bg-yellow-200 font-semibold fixed top-0 bottom-0 right-0 w-64  z-50 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
           <div className='absolute right-6 top-6' onClick={closeMenu}>
             <RxCross2 />
@@ -55,10 +57,11 @@ const Navbar = () => {
           <li><a href='#contact'>Contact</a></li>
 
           {/* Spacer */}
-          <div className="flex-grow"></div>
+        
+          <Sociallinks />
 
           {/* Social Links Positioned at the Bottom */}
-          <Sociallinks />
+         
         </ul>
       </div>
     </>

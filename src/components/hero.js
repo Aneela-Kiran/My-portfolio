@@ -1,26 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import image from "../assets/pc1.png";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
+  useEffect(()=>{
+    AOS.init()
+  },[]);
   return (
     <>
       <section
         id="home"
-        className="flex flex-col-reverse   justify-center md:flex-row mt-10  md:justify-evenly  items-center py-3 mx-auto m-4 px-8"
+        className="flex flex-col-reverse  justify-center md:flex-row mt-10  md:justify-evenly  items-center py-3 mx-auto m-4 px-8"
       >
         {/* hero Text */}
-        <div className="m-3 mb-2 mt-7 px-3 mx-auto md:mx-0  md:py-5 leading-snug text-center md:text-left text-white text-sm  ">
+        <div data-aos="fade-right" data-aos-delay='800' className="m-3 mb-2 mt-7 px-3 mx-auto md:mx-0  md:py-5 leading-snug text-center md:text-left text-white text-sm  ">
           <h1>
-            <span className="text-sm py-2">Hello,There Welcome to my site</span>{" "}
+            <span className="text-sm py-2 gsap  ">Hello,There Welcome to my site</span>{" "}
             <br></br>
-            <span className="py-2   mt-2 animate-fadeIn text-3xl sm:text-5xl ">
+            <span className="py-2   mt-2 animate-fadeIn font-semibold text-2xl sm:text-4xl ">
               I'm Aneela Kiran
             </span>
           </h1>
           <TypeAnimation
-            className="text-yellow-500 inline-block text-[2em] m-2 sm:text-6xl mb-3 font-bold"
+            className="text-yellow-500 inline-block text-[2em] m-2 sm:text-3xl mb-3 font-bold"
             sequence={[
               "Frontend Developer",
               2000,
@@ -40,7 +45,7 @@ const HeroSection = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex md:items-start  md:justify-start mt-8 justify-center items-center  ">
+          <div  className="flex md:items-start  md:justify-start mt-8 justify-center items-center  ">
             <a
               href="#contact"
               className=" text-white font-bold m-4 py-3 px-14 rounded-full  shadow-[0_0_15px_5px_rgba(255,255,0,0.50)]  hidden md:block"
@@ -60,7 +65,7 @@ const HeroSection = () => {
 
         {/* picture  */}
 
-        <div className="mt-6 ml-10 h-100 w-auto overflow-hidden rounded-full  shadow-2xl   ">
+        <div  data-aos="zoom-in-up" data-aos-duration='1000' className="mt-6 ml-10 h-100 w-auto overflow-hidden rounded-full  shadow-2xl   ">
           <img
             className="w-80 h-96  object-cover"
             src={image}

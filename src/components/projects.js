@@ -1,5 +1,6 @@
-
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import projects from "../Data/projectData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,6 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 const ProjectsSlider = () => {
+
+  useEffect(()=>{
+    AOS.init()
+ },[]);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -42,14 +48,14 @@ const ProjectsSlider = () => {
   };
 
   return (
-    <section id="projects" className="py-12 mt-16 mx-auto m-4 px-8">
-      <h1 className="text-yellow-500 font-bold text-3xl text-center mb-8">
+    <section  id="projects" className="py-12 mt-16 mx-auto m-4 px-8">
+      <h1 data-aos="zoom-in" className="text-yellow-500 font-bold text-3xl text-center mb-8">
         Projects
       </h1>
       <Slider {...settings}>
-
+        
         {projects.map((item, index) => (
-          <div key={index} className="shadow-4xl p-3  rounded-lg">
+          <div  key={index} className="shadow-4xl p-3  rounded-lg">
             <div className="bg-slate-300 overflow-hidden rounded-lg  h-64 flex justify-center items-center m-3 ">
               <img
                 className="h-full w-full object-cover border-2 hover:scale-125 duration-1000 border-yellow-400"
@@ -62,7 +68,7 @@ const ProjectsSlider = () => {
            <div className="text-gray-200 text-start  py-2"> <p >{item.description}</p></div>
           </div>
         ))}
-        
+   
       </Slider>
     </section>
   );
