@@ -10,7 +10,7 @@ const Services = () => {
   },[]);
   return (
     <React.Fragment>
-    <section id='services' className=' py-12 mt-16 mx-auto m-4 px-8 '>
+    <section id='services' className=' py-12 mt-16 mx-auto m-4 px-8 max-w-full'>
 
     <div className='container mx-auto px-6  m-5 '>
         <h1  data-aos="zoom-in" className='text-yellow-500 text-4xl font-bold mb-12 text-center '>MY SERVICES</h1>

@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='w-full overflow-x-hidden shadow-2xl flex items-center justify-between lg:justify-around  md:px-8 sm:px-4 sticky top-0 z-50'>
+      <div className='w-full overflow-x-hidden shadow-2xl flex items-center  about-background md:bg-transparent justify-between lg:justify-around  md:px-8 sm:px-4 sticky top-0 z-50 max-w-full'>
         {/* Logo */}
         <div className='flex'>
           <img className='md:py-3 sm:py-3 mt-4 w-32 rounded-full' src={logo} alt="Logo" />
@@ -39,20 +39,20 @@ const Navbar = () => {
         {/* right button */}
 
         <Sociallinks/>
-          <button className='block lg:hidden ' onClick={openMenu}>
-            <TiThMenu className=' border-2  p-4 size-6 text-white' />
-          </button>
-        
-
+        <button className='inline-block lg:hidden ' onClick={openMenu}>
+              <TiThMenu className=' text-white' size={24} />
+        </button>
+       
         {/* .......for Mobile screen  */}
         <ul id='sideMenu' className={`flex md:hidden flex-col gap-4 py-20 px-10 rounded-lg bg-yellow-200 font-semibold fixed top-0 bottom-0 right-0 w-64  z-50 transition-transform duration-500 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 
           <div className='absolute right-6 top-6' onClick={closeMenu}>
-            <RxCross2 />
+            <RxCross2 className='font-semibold' size={24}/>
           </div>
           <li><a href='#home'>Home</a></li>
           <li><a href='#about'>About</a></li>
           <li><a href='#services'>Services</a></li>
+          <li><a href='#skills'>My Skills</a></li>
           <li><a href='#projects'>Projects</a></li>
           <li><a href='#contact'>Contact</a></li>
 

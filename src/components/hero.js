@@ -13,7 +13,7 @@ const HeroSection = () => {
     <>
       <section
         id="home"
-        className="flex flex-col-reverse  justify-center md:flex-row mt-10  md:justify-evenly  items-center py-3 mx-auto m-4 px-8"
+        className="flex flex-col-reverse  justify-center md:flex-row mt-10  md:justify-evenly  items-center py-3 mx-auto m-4 px-8 max-w-full"
       >
         {/* hero Text */}
         <div data-aos="fade-right" data-aos-delay='800' className="m-3 mb-2 mt-7 px-3 mx-auto md:mx-0  md:py-5 leading-snug text-center md:text-left text-white text-sm  ">

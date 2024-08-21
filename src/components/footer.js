@@ -9,7 +9,7 @@ const Footer = () => {
     AOS.init()
   },[]);
   return (
-    <div className='custom-black mx-auto m-4 mb-0 px-8'>
+    <div className='custom-black mx-auto m-4 mb-0 px-8 max-w-full'>
   
       <div   className=' flex-col flex md:justify-between justify-center items-center md:flex-row p-5 w-full '>
       {/* logo */}
